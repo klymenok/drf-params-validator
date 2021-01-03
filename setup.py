@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="drf-action-params-validator",
-    version="0.0.1",
+    version="0.0.2",
     author="Oleksii Klymenok",
     author_email="klymenok.a@gmail.com",
     description="A small validator for params in drf view actions",
@@ -20,7 +20,7 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-    'Django>=3.0.3',
+    'Django>=2.2.0',
     'djangorestframework>=3.11.0'
     ]
 )
