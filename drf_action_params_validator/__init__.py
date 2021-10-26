@@ -16,11 +16,11 @@ def validate_request_params(params=None, data=None):
         def wrapper(self, request, *args, **kwargs):
             if data:
                 for item in data:
-                    if not request.data.get(item):
+                    if request.data.get(item) is None:
                         return Response(f'`{item}` parameter is missing', status=status.HTTP_400_BAD_REQUEST)
             if params:
                 for param in params:
-                    if not request.query_params.get(param):
+                    if request.query_params.get(param) is None:
                         return Response(f'`{param}` parameter is missing', status=status.HTTP_400_BAD_REQUEST)
             return f(self, request, *args, **kwargs)
         return wrapper
