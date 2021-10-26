@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="drf-action-params-validator",
-    version="0.0.3",
+    version="0.0.4",
     author="Oleksii Klymenok",
     author_email="klymenok.a@gmail.com",
     description="A small validator for params in drf view actions",
